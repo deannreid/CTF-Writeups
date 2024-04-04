@@ -21,7 +21,6 @@ After opening up VB Editor, the first thing I noticed was the Sheets listed on t
 After Enabling the hidden sheets, I was greeted with this awful mess.
 ![](screenshots/Step1.2.png)
 ![](screenshots/Step1.3.png)
-![](screenshots/Step1.3.png)
 
 ### Step 2:
 In summary, the script appears to be dynamically constructing a command based on values in the Excel spreadsheet, executing the command, and then opening a specified YouTube link in the web browser which is most likely designed to move the end users' attention away from what the script is doing. 
