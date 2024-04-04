@@ -18,8 +18,11 @@ After opening up VB Editor, the first thing I noticed was the Sheets listed on t
 ![](screenshots/Step1.1.png)
 
 
-After Enabling the hidden sheets we are greeted with this awful mess.
+After Enabling the hidden sheets.
 ![](screenshots/Step1.2.png)
+![](screenshots/Step1.3.png)
+
+I was greeted with this awful mess.
 ![](screenshots/Step1.3.png)
 
 ### Step 2:
