@@ -61,4 +61,4 @@ try{
 } catch {} ""
 ```
 
-## Flag: utflag{banANA-Hakrz09182afd4.exe}
+## Flag: utflag{banANA-Hakrz09182afd4}
