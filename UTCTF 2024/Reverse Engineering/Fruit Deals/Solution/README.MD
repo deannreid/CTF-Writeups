@@ -13,45 +13,40 @@ By Samintell (@samintell on discord)
 
 On the initial load of the spreadsheet, It warned me saying that it was unable to find deals and the popup to enable macros
 
-  
-
 After opening up VB Editor, the first thing I noticed was the Sheets listed on the editor didn't match what was being shown on the main UI 
-
 ![](screenshots/Step1.1.png)
-![](screenshots/Step1.2.png)
+
 
 After Enabling the hidden sheets we are greeted with this awful mess.
-
+![](screenshots/Step1.2.png)
 ![](screenshots/Step1.3.png)
 
+### Step 2:
 In summary, the script appears to be dynamically constructing a command based on values in the Excel spreadsheet, executing the command, and then opening a specified YouTube link in the web browser which is most likely designed to move the end users' attention away from what the script is doing. 
 
 Upon examining the code within the AutoOpen Macro, it initializes several variables and scans different cells within Sheet 2 for particular values. 
 Depending on these values, specific strings are appended with corresponding values, ultimately forming a command ('f') by manipulating strings.
 
-![](screenshots/Step1.44.png)
-
-### Step 2:
-
 ![](screenshots/Step2.png)
 
 ### Step 3:
 
-To find out what the script is doing in the background, I briefly looked at what is being appended and saw some strings that stand out.
+To find out what the script is doing in the background, I briefly looked at what is being appended and saw some strings that stand out which was ```Invok``` ```http``` ```K.Dow``` and ```nload```
 
 ![](screenshots/Step3.1.png)
 ![](screenshots/Step3.2.png)
 
 ### Step 4:
 
-To read the output, just need to add a breakpoint on the line 
+To read the output, I just need to add a breakpoint on the line 
 ```
 f = t53df028c67b2f07f1069866e345c8b85 + qe32cd94f940ea527cf84654613d4fb5d + e5b138e644d624905ca8d47c3b8a2cf41 + tfd753b886f3bd1f6da1a84488dee93f9 + z92ea38976d53e8b557cd5bbc2cd3e0f8 + xc6fd40b407cb3aac0d068f54af14362e
 ```
 ![](screenshots/Step4.png)
+
+After opening up the variable viewer, I can see the strings and their values, which shows the script to be executed and the flag is appended to the $CNTA variable. 
 ![](screenshots/Step4.1.png)
 
-We can see the command that is to be executed and the flag is appended to the $CNTA variable.
 
 ### Executed Command: 
 ```powershell 
