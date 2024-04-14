@@ -1,8 +1,9 @@
-# Fruit Deals - Reverse Engineering Writeup
+# Slowly downward Web Writeup
 
 ### Website: http://slow.martiansonly.net/
 
 ## Description:
+
 ![](screenshots/problem.png)
 
 We've found what appears to be a schizophrenic alien's personal blog. Poke around and see if you can find anything interesting.
@@ -10,6 +11,7 @@ We've found what appears to be a schizophrenic alien's personal blog. Poke aroun
 Author: liabell (https://github.com/Liabell)
 
 ## Solution:
+
 ### Step 1:
 
 ![](screenshots/ss1.png)
