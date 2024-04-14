@@ -165,7 +165,7 @@ if (fileName.includes('arbiter.txt; cat /secret/flag.txt')
 
 I entered "arbiter.txt; cat /secret/flag.txt" into the box, and it worked flawlessly.. Happy days
 
-![screenshots/solution.png]
+![](screenshots/solution.png)
 
 ### Executed Text: 
 ```bash
