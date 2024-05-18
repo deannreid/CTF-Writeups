@@ -1,5 +1,5 @@
 # HTB (Blackfield) Writeup
-![[Pasted image 20240518191049.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Hard/Blackfield/images/Pasted%20image%2020240518191049.png?raw=true)
 ### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/Blackfield)
 
 ## Recon
@@ -115,7 +115,7 @@ $krb5asrep$23$support@BLACKFIELD:d7a3b568f5dbb679180701f56c073414$2ec2e0f213977a
 ## Exploitation
 
 Loaded up Bloodhound to see if I could find any wins and it looks like the support user can change Audit2020's password
-![[Pasted image 20240518205925.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Hard/Blackfield/images/Pasted%20image%2020240518205925.png?raw=true)
 
 I done a quick google search for changing passwords and came across this website
 [Reset AD user password with Linux - Malicious Link - Blog by mubix - Rob Fuller](https://malicious.link/posts/2017/reset-ad-user-password-with-linux/)
