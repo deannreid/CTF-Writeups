@@ -1,7 +1,7 @@
-# HTB (Sauna - Retired) Writeup
+![image](https://github.com/deannreid/CTF-Writeups/assets/5481657/ab6e036c-e08b-4c51-b964-29fc097547d7)# HTB (Sauna - Retired) Writeup
 ### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/229)
 
-![]()
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Easy/Sauna/images/Pasted%20image%2020240518231146.png?raw=true)
 
 
 # Recon:
