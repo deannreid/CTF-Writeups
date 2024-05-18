@@ -1,7 +1,7 @@
 # HTB (SolarLab S5) Writeup
 ### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/601)
 
-![[Pasted image 20240518231146.png]]
+![](https://raw.githubusercontent.com/deannreid/CTF-Writeups/main/HackTheBox/Competitive/Season%205/SolarLab%20-%20S5%20Challenge%20-%20Medium/images/Pasted%20image%2020240518231146.png)
 
 
 # Recon:
