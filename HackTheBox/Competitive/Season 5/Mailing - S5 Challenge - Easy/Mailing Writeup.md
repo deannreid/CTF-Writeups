@@ -1,7 +1,8 @@
 # HTB (Mailing S5) Writeup
 
 ### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/competitive/5/overview)
-![[HackTheBox/Competitive/Season 5/Mailing - S5 Challenge - Easy/images/Pasted image 20240511014518.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/Mailing%20-%20S5%20Challenge%20-%20Easy/images/Pasted%20image%2020240511014518.png)
+
 
 # Recon:
 ## Enumeration
