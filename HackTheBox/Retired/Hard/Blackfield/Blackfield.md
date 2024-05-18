@@ -1,6 +1,6 @@
 # HTB (Blackfield) Writeup
-![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Hard/Blackfield/images/Pasted%20image%2020240518191049.png?raw=true)
-### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/Blackfield)
+![image](https://github.com/deannreid/CTF-Writeups/assets/5481657/d7c9bc5a-b302-4c97-8ed9-feef2349f22c)
+### Website: [Hack The Box :: Hack The Box]([https://app.hackthebox.com/machines/Blackfield](https://app.hackthebox.com/machines/255))
 
 ## Recon
 ### Rustscan and NMap
