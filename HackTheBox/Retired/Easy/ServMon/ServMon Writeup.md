@@ -1,7 +1,7 @@
 # HTB (ServMon - Retired) Writeup
 ### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/240)
 
-![]()
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Easy/ServMon/images/Pasted%20image%2020240518231146.png?raw=true)
 
 
 # Recon:
