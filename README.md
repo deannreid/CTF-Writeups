@@ -23,7 +23,7 @@
   [SolarLab](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/SolarLab%20-%20S5%20Challenge%20-%20Medium/SolarLab%20Writeup.md)
 ##### Hard
 ##### Insane
-  [Magic Gardens In Progress](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/MagicGardens%20-%20S5%20Challenge%20-%20Insane/MagicGardens%20Writeup.md)
+  [Magic Gardens](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/MagicGardens%20-%20S5%20Challenge%20-%20Insane/MagicGardens%20Writeup.md)
 
 ---
 ### Retired
@@ -37,3 +37,4 @@
 
 [Flight](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Hard/Flight/Flight%20Writeup.md)
 ##### Insane
+[Sizzle](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Sizzle%20-%20Writeup.md)
