@@ -18,12 +18,17 @@
 ### Competitive
 #### Season 5
 ##### Easy
-  [Mailing](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/Mailing%20-%20S5%20Challenge%20-%20Easy/Mailing%20Writeup.md)
+  [Mailing](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W3-Mailing%20-%20S5%20Challenge%20-%20Easy/Mailing%20Writeup.md)
+  [BoardLight](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W6-BoardLight%20-%20S5%20Challenge%20-%20Easy/Writeup.md)
+  [Editorial](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W9-Editorial%20-%20S5%20Challenge%20-%20Easy/Writeup.md)
 ##### Medium
-  [SolarLab](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/SolarLab%20-%20S5%20Challenge%20-%20Medium/SolarLab%20Writeup.md)
+  [SolarLab](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W4-SolarLab%20-%20S5%20Challenge%20-%20Medium/Writeup.md)
+  [Blurry](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W8-Blurry%20-%20S5%20Challenge%20-%20Medium/Writeup.md)
 ##### Hard
+  [Freelancer](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W7-Freelancer%20-%20S5%20Challenge%20-%20Hard/Writeup.md)
+  [Axlle](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W10-Axlle%20-%20S5%20Challenge%20-%20Hard/Writeup.md)
 ##### Insane
-  [Magic Gardens](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/MagicGardens%20-%20S5%20Challenge%20-%20Insane/MagicGardens%20Writeup.md)
+  [Magic Gardens](https://github.com/deannreid/CTF-Writeups/blob/main/HackTheBox/Competitive/Season%205/W5-MagicGardens%20-%20S5%20Challenge%20-%20Insane/Writeup.md)
 
 ---
 ### Retired
